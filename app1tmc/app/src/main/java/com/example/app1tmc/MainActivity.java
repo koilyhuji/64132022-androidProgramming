@@ -1,6 +1,9 @@
 package com.example.app1tmc;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void SayHello(){
+        View num1 = findViewById(R.id.editTextNumberDecimal);
+        EditText num2 = findViewById(R.id.editTextNumberDecimal2);
+        num1;
+        Toast.makeText(this, "Hello button clicked!", Toast.LENGTH_SHORT).show();
     }
 }
