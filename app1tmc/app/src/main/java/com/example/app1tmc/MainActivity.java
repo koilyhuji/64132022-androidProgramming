@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public void SayHello(){
         View num1 = findViewById(R.id.editTextNumberDecimal);
         EditText num2 = findViewById(R.id.editTextNumberDecimal2);
-        num1;
+
         Toast.makeText(this, "Hello button clicked!", Toast.LENGTH_SHORT).show();
     }
 }

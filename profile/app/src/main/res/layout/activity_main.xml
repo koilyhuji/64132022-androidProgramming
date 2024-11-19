@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCF2F1"
+    >
+
+    <!-- Top Left Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonTopLeft"
+        android:layout_width="181dp"
+        android:layout_height="221dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/rounded_buttontl"
+        android:text="BMI"
+        android:onClick="switchbai1"
+        android:textSize="18sp" />
+
+    <!-- Top Right Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonTopRight"
+        android:layout_width="182dp"
+        android:layout_height="226dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounded_buttontr"
+        android:text="CustomList"
+        android:onClick="switchbai2"
+        android:textSize="18sp" />
+
+    <!-- Center CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/img" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="Quynh PG"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+
+                    android:gravity="center_horizontal"
+                    android:text="Android ////////////////"
+                    android:textColor="#CCCCCC"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/social_media_google_icon" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/social_media_github" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/social_media_facebook_icon" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bottom Left Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBottomLeft"
+        android:layout_width="178dp"
+        android:layout_height="207dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_buttonbl"
+        android:text="Recycler "
+        android:onClick="switchbai3"
+        android:textSize="18sp" />
+
+    <!-- Bottom Right Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBottomRight"
+        android:layout_width="174dp"
+        android:layout_height="206dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_buttonbr"
+        android:text="Profile"
+        android:onClick="switchbai4"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> dsBaiTho;
-    ListView lisviewBaither;
+    ListView lisviewBaither = findViewById(R.id.lvBt);;
     ArrayList<String> getData(){
         ArrayList<String> ddsBaiTho = new ArrayList<String>();
         ddsBaiTho.add("than em vua trang lai vua tron");
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         });
         dsBaiTho = getData();
         ArrayAdapter<String> adapterther = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,dsBaiTho);
-        lisviewBaither = findViewById(R.id.lvBt);
+
         lisviewBaither.setAdapter(adapterther);
         lisviewBaither.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
