@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatsFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/addEntryButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:minWidth="100dp"
+                android:text="Day view"
+                android:background="@color/green" />
+
+            <HorizontalScrollView
+                android:id="@+id/rowScroller"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/rowsInsideScroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Dynamic rows will be added here programmatically -->
+                    <!-- Example of a single row: -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="bottom">
+
+                        <LinearLayout
+                            android:layout_width="60dp"
+                            android:layout_height="300dp"
+                            android:background="@color/green"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+
+
+
+</FrameLayout>
