@@ -1,6 +1,8 @@
 package th.phangiaquynh.th3_vuihoctoan;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 public class Toan extends AppCompatActivity {
 
@@ -22,9 +26,6 @@ public class Toan extends AppCompatActivity {
         transaction.replace(R.id.topFragmentContainer, topFragment);
         transaction.commit();
 
-        Fragment bottomFragment = new Toanbottom();
-        transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.bottomFragmentContainer, bottomFragment);
-        transaction.commit();
+
     }
 }

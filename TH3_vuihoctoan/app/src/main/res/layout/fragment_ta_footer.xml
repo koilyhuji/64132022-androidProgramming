@@ -7,23 +7,25 @@
     android:background="#3F51B5"
     android:padding="16dp">
 
-    <Button
+    <ImageButton
         android:id="@+id/leftButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="pre"
-        android:textSize="24sp"
+        android:src="@drawable/left_arrow_svgrepo_com"
         android:textColor="#FFFFFF"
         android:layout_marginEnd="8dp"
         android:background="@drawable/circular_button"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/rightButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/left_arrow_svgrepo_com"
+        android:scaleX="-1"
         android:text="next"
         android:textSize="24sp"
         android:textColor="#FFFFFF"
         android:layout_marginStart="8dp"
-        android:background="@drawable/circular_button"/>
+        android:background="@drawable/circular_button" />
 </LinearLayout>
