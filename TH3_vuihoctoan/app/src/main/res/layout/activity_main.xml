@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="28dp"
+        android:text="TRẮC NGHIỆM"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:text="Tieng anh" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="194dp"
+        android:layout_height="77dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#009688"
+        android:text="TOAN" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="194dp"
+        android:layout_height="77dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#FF5722"
+        android:text="lAP TRINH" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp"
+        android:text="HỌC VUI - VUI HỌC"
+        android:textSize="20sp" />
+</LinearLayout>
