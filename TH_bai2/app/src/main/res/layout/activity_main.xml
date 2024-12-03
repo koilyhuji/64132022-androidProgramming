@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/heightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chiều cao (cm):"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Nhập chiều cao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightLabel"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/weightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cân nặng (kg):"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightEditText"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+
+        android:hint="Nhập cân nặng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weightLabel"
+        android:layout_marginTop="8dp"/>
+
+
+    <CheckBox
+        android:id="@+id/asianCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Người Châu Á"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weightEditText"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tính BMI"
+        app:layout_constraintTop_toBottomOf="@id/asianCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/bmiResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chỉ số BMI: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculateButton"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/bmiCategoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đánh giá: "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bmiResultText"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
