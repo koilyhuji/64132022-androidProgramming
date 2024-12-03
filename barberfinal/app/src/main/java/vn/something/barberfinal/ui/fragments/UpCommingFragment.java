@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import vn.something.barberfinal.BookingDetail;
@@ -35,44 +36,9 @@ public class UpCommingFragment extends Fragment implements CardAdapterBooking.On
         recyclerView = root.findViewById(R.id.recyclerViewBookingCardu);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        dataList = new ArrayList<>(Arrays.asList("Item1", "Item2", "Item3"));
         cardAdapter = new CardAdapterBooking(dataList, this);
         recyclerView.setAdapter(cardAdapter);
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                int position = viewHolder.getAdapterPosition();
-                String item = dataList.get(position);
-
-                if (direction == ItemTouchHelper.LEFT) {
-                    dataList.remove(position);
-                    cardAdapter.notifyItemRemoved(position);
-                    //TODO: add card to sap toi tab
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("movedItem", item);
-//
-//                    UpCommingFragment upCommingFragment = new UpCommingFragment();
-//                    upCommingFragment.setArguments(bundle);
-//
-//                    // Handle fragment transaction
-//                    getParentFragmentManager().beginTransaction()
-//                            .replace(R.id.fragment_container, anotherFragment)
-//                            .addToBackStack(null)
-//                            .commit();
-
-                    Toast.makeText(getContext(), "Card moved to another fragment: " + item, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-
-        itemTouchHelper.attachToRecyclerView(recyclerView);
-
 
         return root;
     }

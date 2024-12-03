@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793830399871",
+    "project_id": "barbershopmm-f2226",
+    "storage_bucket": "barbershopmm-f2226.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793830399871:android:6b12cd841adf68ca42044a",
+        "android_client_info": {
+          "package_name": "vn.something.barberfinal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7o2JdymmQ2VS8qd2jlszc3mk-YdcsIVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -44,20 +44,19 @@ public class PendingFragment extends Fragment implements CardAdapterBooking.OnIt
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return false;
             }
-
+            @Override
+            public int getMovementFlags(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
+                return makeMovementFlags(0, ItemTouchHelper.RIGHT);
+            }
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
                 String item = dataList.get(position);
 
-                if (direction == ItemTouchHelper.LEFT) {
+                if (direction == ItemTouchHelper.RIGHT ) {
                     dataList.remove(position);
                     cardAdapter.notifyItemRemoved(position);
-                    Toast.makeText(getContext(), "Card deleted: " + item, Toast.LENGTH_SHORT).show();
-                } else if (direction == ItemTouchHelper.RIGHT) {
-                    dataList.remove(position);
-                    cardAdapter.notifyItemRemoved(position);
-
+                    Toast.makeText(getContext(), "Card ben tab sap toi: " + item, Toast.LENGTH_SHORT).show();
                     //push data to firebase or some shit, change swipe interface with button because conflict with tab view
                     // save to local db first then push to firebase later
 
