@@ -5,65 +5,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/edtA"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nhập số A"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80dp"/>
-
-    <EditText
-        android:id="@+id/edtB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nhập số B"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtA"
-        android:layout_marginTop="20dp"/>
-
     <LinearLayout
-        android:id="@+id/linearLayoutOperations"
-        android:layout_width="wrap_content"
+        android:id="@+id/lna"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Label for EditText A -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A="
+            android:layout_gravity="start"
+            android:paddingEnd="8dp"/>
+
+        <!-- EditText for A -->
+        <EditText
+            android:id="@+id/edtA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập số A"
+            android:inputType="numberDecimal"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Input field for A"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:id="@+id/lnb"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtB"
+        app:layout_constraintTop_toBottomOf="@id/lna">
+
+        <!-- Label for EditText B -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B="
+            android:layout_gravity="start"
+            android:paddingEnd="8dp"/>
+
+        <!-- EditText for B -->
+        <EditText
+            android:id="@+id/edtB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập số B"
+            android:inputType="numberDecimal"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Input field for B"/>
+    </LinearLayout>
+
+
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupOperations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lnb"
         android:layout_marginTop="20dp">
 
-        <!-- Operation Buttons -->
-        <Button
-            android:id="@+id/btnAdd"
+        <!-- Operation Radio Buttons -->
+        <RadioButton
+            android:id="@+id/rbtnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+"/>
 
-        <Button
-            android:id="@+id/btnSubtract"
+        <RadioButton
+            android:id="@+id/rbtnSubtract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"/>
 
-        <Button
-            android:id="@+id/btnMultiply"
+        <RadioButton
+            android:id="@+id/rbtnMultiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"/>
 
-        <Button
-            android:id="@+id/btnDivide"
+        <RadioButton
+            android:id="@+id/rbtnDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"/>
 
-    </LinearLayout>
+    </RadioGroup>
+
 
     <Button
         android:id="@+id/btnCalculate"
@@ -72,7 +113,7 @@
         android:text="Tính"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutOperations" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupOperations" />
 
     <TextView
         android:id="@+id/tvResult"

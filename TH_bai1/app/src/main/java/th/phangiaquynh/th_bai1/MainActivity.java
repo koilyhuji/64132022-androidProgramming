@@ -3,6 +3,7 @@ package th.phangiaquynh.th_bai1;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtA, edtB;
-    private Button btnAdd, btnSubtract, btnMultiply, btnDivide, btnCalculate;
+    private RadioButton btnAdd, btnSubtract, btnMultiply, btnDivide;
+    private Button btnCalculate;
     private TextView tvResult;
     private String pt;
 
@@ -21,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         edtA = findViewById(R.id.edtA);
         edtB = findViewById(R.id.edtB);
-        btnAdd = findViewById(R.id.btnAdd);
-        btnSubtract = findViewById(R.id.btnSubtract);
-        btnMultiply = findViewById(R.id.btnMultiply);
-        btnDivide = findViewById(R.id.btnDivide);
+        btnAdd = findViewById(R.id.rbtnAdd);
+        btnSubtract = findViewById(R.id.rbtnSubtract);
+        btnMultiply = findViewById(R.id.rbtnMultiply);
+        btnDivide = findViewById(R.id.rbtnDivide);
         btnCalculate = findViewById(R.id.btnCalculate);
         tvResult = findViewById(R.id.tvResult);
 
